@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'inter', sans-serif;
+	transition: .4s all ease-in-out;
+}
+:root{
+	/* --acc: #3B3B98;
+	--acc-rgb: 59, 59, 152; */
+	--acc: #00B300;
+	--acc-rgb: 0, 179, 0;
+	--bg: #fff;
+	--bg-rgb: 255, 255, 255;
+	--text: #000;
+	--text-rgb: 0, 0, 0;
+	--body-pad: 5rem;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	max-width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+section{
+	width: 100vw;
+	min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6, a{
+	font-family: 'inter', 'Arial', sans-serif;
+}
+button{
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+}
+a{
+	font-family: 'inter', sans-serif;
+	text-decoration: none;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.input-group .input-field:invalid::-webkit-datetime-edit {
+    color: rgba(var(--text-rgb), .5) !important;
+}
+body::-webkit-scrollbar {
+	width: 7px;
+}
+body::-webkit-scrollbar-track {
+	border: solid 1px transparent;
+	background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: rgba(var(--acc-rgb), .85);
+outline: 1px solid slategrey;
+}
+/* d-flex-row align-center justify-space-between */
+nav, .nav-ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* line-3rem */
+.nav-links, .nav-h1{
+	line-height: 4rem;
+}
+nav{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	z-index: 10;
+	/* border-bottom: solid 1px rgba(var(--text-rgb), .03); */
+}
+.logo-wrapper{
+	width: 35%;
+	padding-left: var(--body-pad);
+	background: rgba(var(--acc-rgb), .3);
+	/* backdrop-filter: blur(10px); */
+}
+.nav-h1{
+	color: var(--bg);
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.nav-links{
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: rgba(var(--text-rgb), .7);
+	transition: none;
+}
+.nav-links:hover{
+	border-bottom: solid 2px var(--acc);
+	color: var(--acc);
+}
+.links-wrapper{
+	width: 65%;
+	padding: 0 var(--body-pad);
+	background: var(--bg);
+}
+.nav-ul{
+	width: 100%;
+}
+.landing{
+	width: 100%;
+	display: flex;
+}
+.landing-right, .landing-left{
+	/* width: 50%; */
+	height: 100vh;
+}
+.landing-left{
+	width: 35%;
+	padding-left: var(--body-pad);
+	background: url('https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	background-size: cover;
+}
+.landing-right{
+	width: 65%;
+	padding: 6.5rem var(--body-pad);	
+}
+.landing-content{
+	width: 42rem;
+	height: 28rem;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.landing-span{
+	color: rgba(var(--text-rgb),.6);
+	font-size: 12px;
+	letter-spacing: 3px;
+}
+.landing-slogan, .section-h1{
+	color: rgba(var(--text-rgb),.8);
+	font-size: 3.5rem;
+	letter-spacing: -1px;
+}
+.landing-slogan strong{
+	color: var(--acc);
+	letter-spacing: 2px;
+}
+.slogan-content, .section-p{
+	font-family: 'inter', sans-serif;
+	font-size: 1.1rem;
+	color: rgba(var(--text-rgb),.6);
+	width: 80%;
+	line-height: 2rem;
+}
+.btn-primary, .btn-secondary{
+	position: relative;
+	background: var(--acc);
+	border: none;
+	padding: 1rem;
+	color: var(--bg);
+	border-radius: 3px;
+	font-size: 1.2rem;
+}
+.btn-primary::before{
+	content: '';
+	position: absolute;
+	width: 85%;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 10px 20px rgba(var(--acc-rgb), .35);
+}
+.btn-primary:hover{
+	font-size: 1.05rem;
+}
+.btn-secondary{
+	padding: .7rem .5rem;
+	font-size: 1rem;
+	background: rgba(var(--acc-rgb), .85);
+	border-bottom: solid 4px var(--acc);
+}
+.btn-secondary:hover{
+	opacity: .9;
+}
+.btn-tertiary{
+	padding: .75rem 1.5rem;
+	border: solid 1px var(--bg);
+	color: var(--bg);
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	/* text-align: center; */
+}
+.btn-read{
+	text-align: center;
+	width: 45%;
+}
+.btn-cta{
+	width: 30%;
+	font-size: 16px;
+}
+.icon-menu, .icon-close{
+	display: none;
+	cursor: pointer;
+	align-items: flex-end;
+}
+
+/* #services */
+.section-head{
+	padding: 4rem var(--body-pad);
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
+.services{
+	padding: 2rem var(--body-pad);
+}
+.service-container{
+	display: flex;
+	justify-content: space-between;
+	gap: 12rem;
+	margin-bottom: 9rem;
+}
+.service-container .service-content, .service-image{
+	width: 50%;
+}
+.service-image{
+	overflow: hidden;
+	border-radius: 3px;
+}
+.service-image{
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.service-review{
+	padding: 2rem;
+	position: absolute;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 75%);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.service-image:hover .service-review{
+	top: 0%;
+}
+.service-review-h1{
+	padding: .5rem 0 1.5rem;
+	color: var(--bg);
+	border-bottom: solid 1px var(--bg) ;
+}
+.service-review-p{
+	color: var(--bg);
+	font-family: 'inter', sans-serif;
+	line-height: 1.75rem;
+}
+.service-image{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.service-container:nth-child(1) .service-image{
+	background: url('https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.service-container:nth-child(2) .service-image{
+	background: url('https://images.pexels.com/photos/4004016/pexels-photo-4004016.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.service-container:nth-child(3) .service-image{
+	background: url('https://images.pexels.com/photos/5563472/pexels-photo-5563472.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.service-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 3rem;
+}
+.service-content-h1{
+	font-size: 2rem;
+	color: var(--acc);
+}
+.service-capacity{
+	font-size: .85rem;
+	font-family: 'inter', sans-serif;
+	color: rgba(var(--text-rgb), .5);
+	letter-spacing: 1px;
+}
+.service-desc{
+	color: rgba(var(--text-rgb), .8);
+	line-height: 1.5rem;
+	font-family: 'inter', sans-serif;
+	text-align: justify;
+  	text-justify: inter-word;
+}
+.service-explore{
+	color: var(--acc);
+}
+.btn-service{
+	width: 40%;
+}
+.service-container:nth-child(2) .service-image {
+	order: 1;
+}
+.service-container:nth-child(2) .service-content {
+	order: 2;
+}
+/* #book */
+#book{
+	display: flex;
+}
+.book-left, .book-right{
+	min-height: 100vh;
+	width: 50%;
+}
+.btn-more{
+	width: 50%;
+}
+.book-left-wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: rgba(var(--text-rgb), .3);
+}
+.book-left-wrapper h1{
+	color: var(--bg);
+}
+.section-p{
+	color: var(--bg);
+}
+.book-left-wrapper::before{
+	z-index: -1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('https://images.pexels.com/photos/1232594/pexels-photo-1232594.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260') no-repeat;
+	background-size: cover;
+}
+.booking-nav{
+	padding: 0 var(--body-pad) 2rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.75rem;
+}
+#mode{
+	width: 100%;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: solid 1px var(--acc);
+	color: var(--acc);
+	font-size: 1.5rem;
+	padding: 1rem 0px;
+}
+.forms{
+	padding: 2rem var(--body-pad) var(--body-pad);
+}
+.forms form{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	background: var(--bg);
+}
+.input-group{
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+.input-group .input-container{
+	margin: 0;
+	width: 45%;
+}
+.input-container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.input-field{
+	outline: none;
+	padding: .5rem 4px;
+	width: 100%;
+	height: 2.5rem;
+	order: 2;
+	border: none;
+	border-bottom: solid 1px rgba(var(--text-rgb), .2);
+}
+.input-field:focus{
+	border-bottom: solid 1px var(--acc);
+}
+.input-field:focus+.ip-label{
+	color: var(--acc);
+	font-weight: bold;
+}
+.ip-label{
+	order: 1;
+	font-size: .85rem;
+}
+.btn-submit{
+	margin-top: 2.5rem;
+	width: 100%;
+}
+/* #reviews */
+#reviews{
+	min-height: 100vh;
+	padding-top: 0;
+}
+#review .section-head{
+	padding-top: 0;
+}
+.reviews-wrapper{
+	padding: var(--body-pad);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	min-height: 130vh;
+	gap: 3rem;
+}
+.review{
+	box-shadow: 0 0 10px rgba(var(--text-rgb), .09);
+	border-radius: 3px;
+	padding: 1.5rem;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.review-header{
+	display: flex;
+	gap: 1.7rem;
+
+}
+.user-image{
+	height: 3.5rem;
+	width: 3.5rem;
+	border-radius: 50%;
+}
+.user-details{
+	height: 3.5rem;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.user-name-h3{
+	color: rgba(var(--text-rgb), .8);
+}
+.trip-to{
+	font-size: .8rem;
+	color: rgba(var(--text-rgb), .6);
+}
+.trip-to strong{
+	color: var(--acc);
+}
+.review-mid{
+	display: flex;
+	flex-direction: column;
+	gap: 1.3rem;
+}
+.review-title{
+	color: var(--acc);
+}
+.review-stars{
+	color: var(--acc);
+	display: flex;
+	gap: .35rem;
+}
+.feedback{
+	padding: var(--body-pad);
+	padding-top: 0;
+}
+.feedback p{
+	font-size: .9rem;
+	margin-bottom: 1.5rem;
+}
+.btn-feed{
+	border-color: var(--acc);
+	color: var(--acc);
+	width: 20%;
+}
+/* #footer */
+#footer{
+	width: 100%;
+	padding: var(--body-pad);
+	height: 70vh;
+	background: rgba(var(--text-rgb), .015);
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.foot-links{
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.foot-1 div{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.foot-link-head{
+	color: var(--acc);
+	font-weight: bold;
+}
+.foot-links-a{
+	color: rgba(var(--text-rgb), .7);
+}
+.subscription{
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.15rem;
+}
+.subscription .input-field{
+	background: transparent;
+}
+.subscription p{
+	color: var(--acc);
+}
+#footer h1{
+	font-weight: 500;
+}
+.social-links{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.social-links h3{
+	color: var(--acc);
+	width: 100%;
+}
+.btn-sub{
+	width: 100%;
+}
+.contact{
+	display: flex;
+	gap: 1rem;
+	align-items: flex-end;
+	padding-left: .25rem;
+	font-size: 1.25rem;
+	color: var(--acc);
+}
+.copy{
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translateX(-50%);
+	color: rgba(var(--text-rgb), .7);
+	font-size: .8rem;
+}
+@media (max-width: 750px){
+	.icon-menu, .icon-close{
+		display: initial;
+		line-height: 4rem;
+		color: var(--bg);
+	}
+	.icon-close{
+		position: relative;
+		top: 0;
+		right: -35%;
+		font-size: 1.5rem;
+		color: var(--acc);
+	}
+	.logo-wrapper{
+		width: 100%;
+		padding-left: var(--body-pad);
+		display: flex;
+		justify-content: space-between;
+		background: transparent;
+		backdrop-filter: none;
+	}
+	nav{
+		padding: 0;
+		justify-content: space-between;
+		position: fixed;
+		z-index: 2;
+	}
+	nav, .nav-ul{
+		flex-direction: column;
+	}
+	.links-wrapper{
+		width: 60%;
+		position: fixed;
+		padding: 0;
+		left: 150%;
+		border-left: solid 1px rgba(var(--text-rgb), .05);
+	}
+	.logo-wrapper, .landing-right{
+		padding: 0 2rem;
+	}
+	.nav-ul{
+		width: 100%;
+		/* padding-top: 4rem; */
+		padding-bottom: 18.5rem;
+		background: rgba(var(--bg-rgb), .89);
+		backdrop-filter: blur(2.5px);
+		height: 100vh;
+	}
+	.nav-li{
+		width: 100%;
+	}
+
+	.nav-li{
+		padding-left: 3rem;
+		width: 100%;
+		
+	}
+	.nav-h1{
+		color: var(--bg);
+	}
+	.logo-wrapper{
+		align-items: flex-start;
+		background: transparent;
+	}
+	.landing-left{
+		display: none;
+	}
+	.landing-right{
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		padding: 6rem 2rem;
+		background: rgba(var(--text-rgb), .35);
+	}
+	.landing-right::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url('https://images.pexels.com/photos/1173777/pexels-photo-1173777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+		z-index: -1;
+		background-size: cover;
+	}
+	.landing-content{
+		width: 100%;
+	}
+	.landing-slogan{
+		color: var(--bg);
+		font-weight: 600;
+	}
+	.landing-span{
+		color: var(--bg);
+	}
+	.slogan-content{
+		color: var(--bg);
+		width: 100%;
+		font-size: .95rem;
+	}
+	.btn-cta{
+		width: 60%;
+	}
+
+	/* services */
+	.section-head{
+		padding: 4rem 2rem;
+	}
+	.landing-slogan, .section-h1{
+		font-size: 2rem;
+	} 
+	.service-container{
+		flex-direction: column;
+		min-height: 50vh;
+		gap: 5rem;
+	}
+	.service-container .service-content, .service-image{
+		width: 100%;
+	}
+	.services-head{
+		padding: 2rem;
+	}
+	.service-content-h1{
+		font-size: 1.5rem;
+	}
+	.services{
+		padding: 2rem;
+	}
+	.service-content{
+		gap: 3rem;
+	}
+	.section-content-h1{
+		font-size: 1.25rem;
+	}
+	.service-image{
+		height: 30vh;
+	}
+	.service-review{
+		padding: 1rem;
+		background: rgba(var(--text-rgb), .5);
+	}
+	.service-review-h1{
+		font-size: 1rem;
+		padding: 0 0 .5rem;
+	}
+	.service-review-p{
+		font-size: .7rem;
+		line-height: 1.2rem;
+	}
+	.btn-tertiary{
+		width: 50%;
+		font-size: .8rem;
+	}
+	.service-container .service-image {
+		order: 1;
+	}
+	.service-container .service-content {
+		order: 2;
+	}
+	.service-container:nth-child(1) .service-image{
+		background: url('https://images.pexels.com/photos/712618/pexels-photo-712618.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	}
+	.service-container:nth-child(2) .service-image{
+		background: url('https://images.pexels.com/photos/731281/pexels-photo-731281.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	}
+	.service-container:nth-child(3) .service-image{
+		background: url('https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	}
+	/* #book */
+	#book{
+		display: flex;
+		flex-direction: column;
+	}
+	.book-left{
+		padding: 2rem;
+		width: 100%;
+	}
+	.btn-more{
+		width: 60%;
+	}
+	.book-right{
+		width: 100%;
+	}
+	.booking-nav{
+		padding: 1rem 2rem;
+	}
+	.forms{
+		padding: 2rem;
+	}
+	.input-group input{
+		background: white;
+
+	}
+	.section-p{
+		width: 100%;
+	}
+	.input-field{
+		padding: .5rem;
+	}
+	/* #reviews */
+	.reviews-wrapper{
+		padding: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr ;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		min-height: 200vh;
+		gap: 3rem;
+	}
+	.review{
+		gap: 2rem;
+	}
+	.review-header{
+		height: 4rem;
+	}
+	.review-header img{
+		width: 4rem;
+		height: 4rem;
+	}
+	.user-details{
+		gap: .75rem;
+	}
+	.user-name-h3{
+		font-size: 1rem;
+	}
+	.trip-to{
+		font-size: .7rem;
+	}
+	.feedback{
+		padding: 2rem;
+	}
+	#footer{
+		min-height: 130vh;
+		padding: 2rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 2rem;
+	}
+	.foot-links:nth-child(1){
+		grid-column: 1/2;
+	}
+	.foot-links:nth-child(2){
+		grid-column: 2/3;
+	}
+	.subscription{
+		width: 100%;
+		grid-column: 1/3;
+		grid-row: 2/3;
+	}
+	.btn-sub{
+		width: 100%;
+	}
+	.social-links{
+		width: 100%;
+		grid-column: 1/3;
+	}
+	.copy{
+		bottom: 0%;
+		padding: 2rem;
+		text-align: left;
+	}
+}
+
+.toggle-nav{
+	left: 40%;
+}
+.bg-white{
+	background: var(--bg);
+}
+.text-acc{
+	color: var(--acc);
+}
+.border{
+	border-bottom: solid 1px rgba(var(--text-rgb), .05);
+}
+.display-none{
+	display: none !important; 
+}
+    </style>
+
+    
+</head>
+
+<body>
+    <section id="home">
+        <nav>
+            <div class="logo-wrapper">
+                <h1 class="nav-h1">Trawellz</h1>
+                <i class="ri-menu-3-line icon-menu"></i>
+            </div>
+            <div class="links-wrapper">
+                <ul class="nav-ul">
+                    <i class="ri-close-line icon-close"></i>
+                    <li class="nav-li"><a class = "nav-links" href = "#home">Home</a></li>
+                    <li class="nav-li"><a class = "nav-links" href = "#services">Our Services</a></li>
+                    <li class="nav-li"><a class = "nav-links" href = "#reviews">Reviews</a></li>
+                    <li class="nav-li"><a class = "nav-links" href = "#book">Book</a></li>
+                    <li class="nav-li"><a class = "nav-links" href = "#footer">About</a></li>
+                </ul>
+                
+            </div>
+        </nav>
+        <div class="landing">
+            <div class="landing-left"></div>
+            <div class="landing-right">
+                <div class="landing-content">
+                    <span class="landing-span">
+                        A travel agency
+                    </span>
+                    <h1 class="landing-slogan">
+                        Hey do you love <strong>Travelling?</strong>
+                    </h1>
+                    <p class="slogan-content">
+                        Trawellz is the most highly recomended travel agency by most travellers all around the world.
+                    </p>
+                    <button class="btn-cta btn-primary">
+                        Start your journey
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="section-head">
+            <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M0.72145 6.92124L5.38989 15.0905C5.54736 15.3666 5.81093 15.5663 6.11915 15.6436L10.4746 16.7325L25.4127 31.6706L27.0633 30.0205L11.8913 14.849C11.742 14.6993 11.5548 14.5932 11.3498 14.5418L7.1648 13.4918L3.1901 6.53237L6.59781 3.12465L13.5601 7.1032L14.6106 11.2882C14.6615 11.4937 14.7681 11.6814 14.9174 11.8307L30.0893 27.0026L31.7394 25.3521L16.8013 10.4139L15.7124 6.06091C15.6351 5.75221 15.4354 5.48816 15.1593 5.33021L6.98957 0.662247C6.53396 0.402996 5.96072 0.479811 5.58913 0.849964L0.921169 5.51841C0.545735 5.8876 0.464119 6.46179 0.72145 6.92124Z" fill="#00B300"/>
+                <path d="M49.2422 23.5009L23.5672 49.1763L21.9167 47.5257L47.5921 21.8508L49.2422 23.5009Z" fill="#00B300"/>
+                <path d="M19.0736 50.0847C18.8623 49.7333 18.483 49.5187 18.073 49.5187H11.0709C10.6613 49.5187 10.2816 49.7333 10.0708 50.0847L6.5695 55.9198C6.34721 56.2895 6.34721 56.7518 6.5695 57.1219L10.0708 62.957C10.2816 63.308 10.6613 63.523 11.0709 63.523H18.073C18.483 63.523 18.8623 63.308 19.0736 62.957L22.5744 57.1219C22.7967 56.7518 22.7967 56.2895 22.5744 55.9198L19.0736 50.0847ZM17.4129 61.1888H11.7315L8.9306 56.5209L11.7315 51.8524H17.4129L20.2138 56.5209L17.4129 61.1888Z" fill="#00B300"/>
+                <path d="M56.5848 28.5118C64.2928 28.5377 70.5628 22.3099 70.5887 14.602C70.5926 13.4286 70.4485 12.2601 70.16 11.1227C70.0044 10.4972 69.3712 10.1165 68.7456 10.272C68.5402 10.3234 68.3529 10.4295 68.2031 10.5788L60.9383 17.8388L55.1743 15.9179L53.252 10.1553L60.5168 2.88911C60.9724 2.43302 60.9719 1.69415 60.5159 1.23854C60.3656 1.08827 60.1764 0.981691 59.9695 0.930801C52.4944 -0.962212 44.9008 3.56268 43.0078 11.0373C42.7202 12.1713 42.5766 13.3369 42.5805 14.5069C42.5834 15.4258 42.6779 16.3418 42.8642 17.2415L17.3054 42.7999C16.4057 42.6141 15.4897 42.5195 14.5713 42.5161C6.83646 42.5161 0.566425 48.7862 0.566425 56.521C0.566425 64.2553 6.83646 70.5253 14.5713 70.5253C22.3056 70.5253 28.5756 64.2553 28.5756 56.521C28.5728 55.6021 28.4777 54.6861 28.2919 53.7864L34.4107 47.6675L37.0868 50.3436C37.5428 50.7992 38.2812 50.7992 38.7373 50.3436L39.3206 49.7598C39.8324 49.2514 40.6596 49.2514 41.1714 49.7598C41.6827 50.2697 41.6837 51.0973 41.1738 51.6086C41.1733 51.6091 41.1724 51.6101 41.1714 51.611L40.5881 52.1944C40.1325 52.65 40.1325 53.3888 40.5881 53.8444L54.5099 67.7662C58.1716 71.4615 64.1353 71.4884 67.8306 67.8267C71.5254 64.165 71.5523 58.2008 67.8906 54.506C67.8709 54.4859 67.8507 54.4657 67.8306 54.4455L53.9088 40.5242C53.4532 40.0686 52.7143 40.0686 52.2587 40.5242L51.6754 41.1075C51.1631 41.6164 50.3364 41.6164 49.8241 41.1075C49.3133 40.5977 49.3119 39.77 49.8217 39.2592C49.8227 39.2582 49.8237 39.2577 49.8241 39.2568L50.4079 38.673C50.8635 38.2174 50.8635 37.4785 50.4079 37.0229L47.7319 34.3468L53.8507 28.228C54.7504 28.4138 55.6664 28.5089 56.5848 28.5118ZM61.1702 68.1916C60.3224 68.1902 59.4817 68.037 58.6881 67.7389L67.8027 58.6238C69.1782 62.2826 67.3274 66.3634 63.6686 67.7389C62.8702 68.0389 62.0238 68.1926 61.1702 68.1916ZM47.9489 37.8597C46.6565 39.4013 46.8591 41.699 48.4007 42.9909C49.7555 44.1264 51.7301 44.1254 53.0835 42.9876L66.1805 56.0961C66.3226 56.2387 66.4556 56.3889 66.5842 56.5416L56.606 66.5199C56.4528 66.3917 56.3025 66.2587 56.16 66.1161L43.0529 53.0081C44.3453 51.4665 44.1427 49.1688 42.6011 47.8769C41.2463 46.741 39.2712 46.7424 37.9178 47.8797L36.0507 46.0127L46.0813 35.9969L47.9489 37.8597ZM52.6615 26.1219L26.1867 52.5914C25.8962 52.8814 25.7796 53.3024 25.8785 53.7004C27.4796 59.9882 23.6801 66.3836 17.3918 67.9842C11.104 69.5853 4.70868 65.7858 3.10757 59.4976C1.50693 53.2098 5.3064 46.8144 11.5947 45.2133C13.4968 44.7294 15.4897 44.7294 17.3918 45.2133C17.7898 45.3108 18.2099 45.1941 18.5008 44.9056L44.9694 18.4355C45.2594 18.1456 45.3761 17.7245 45.2762 17.327C43.6861 11.1127 47.4347 4.78596 53.6491 3.19541C54.8234 2.89535 56.038 2.78013 57.2478 2.8555L51.0916 9.01416C50.7791 9.32622 50.6696 9.78855 50.8093 10.2077L53.143 17.2103C53.2597 17.5584 53.5334 17.8321 53.8819 17.9478L60.8846 20.282C61.3032 20.4217 61.7655 20.3127 62.0781 20.0006L68.2343 13.8444C68.2483 14.0672 68.2555 14.2875 68.2555 14.5069C68.2881 20.9195 63.1165 26.1444 56.7039 26.1775C55.7125 26.1823 54.7245 26.0604 53.7643 25.8146C53.3663 25.7152 52.9452 25.8314 52.6553 26.1214H52.6615V26.1219Z" fill="#00B300"/>
+                <path d="M60.9133 59.1964L59.2628 60.847L47.5926 49.1768L49.2427 47.5262L60.9133 59.1964Z" fill="#00B300"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="70" height="70" fill="white" transform="translate(0.5 0.5)"/>
+                </clipPath>
+                </defs>
+                </svg>
+            <h1 class="section-h1">We offer world class services to our customers</h1>
+        </div>
+        <div class="services">
+            <div class="service-container">
+                <div class="service-content">
+                    <h1 class="service-content-h1">Travel cabs</h1>
+                    <span class="service-capacity">Maximun 5 people in this medium</span>
+                    <p class="service-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae temporibus dolores esse fugit accusantium magni atque tempore. At, exercitationem quae! Modi excepturi possimus nesciunt ea nobis nemo velit, ad porro quis. Ex labore libero necessitatibus voluptatibus quasi maxime vitae nesciunt! Assumenda cumque aspernatur recusandae sed, dolor eveniet ipsa architecto. Libero quas sapiente error accusamus qui optio odio nostrum voluptatem dignissimos cumque! Delectus, deserunt eveniet! Sequi quos illo fuga, officia ipsam distinctio non facere placeat exercitationem eveniet minus laboriosam, fugit, hic fugiat quaerat deserunt cum odit saepe soluta perspiciatis. Architecto facilis iusto, eveniet iure ipsa doloremque ea quia voluptatum sit voluptatibus.
+                    </p>
+                    <a href="#" class="service-explore">Explore more about car booking</a>
+                    <button class="btn-secondary btn-service">Book a Cab</button>
+                </div>
+                <div class="service-image">
+                    <div class="service-review">
+                        <h1 class="service-review-h1">Car as a travel medium</h1>
+                        <p class="service-review-p">When you choose cars as a medium for your travel it means that you're going to travel within a state. Cars are the least expensive medium for travel.</p>
+                        <buttton class="btn-tertiary btn-read"><i class="ri-google-fill"></i>&nbsp;Read more</buttton>
+                    </div>
+                </div>
+            </div>
+            <div class="service-container">
+                <div class="service-content">
+                    <h1 class="service-content-h1">Travel Flights</h1>
+                    <span class="service-capacity">Upto 20 people is applicable for this medium</span>
+                    <p class="service-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae temporibus dolores esse fugit accusantium magni atque tempore. At, exercitationem quae! Modi excepturi possimus nesciunt ea nobis nemo velit, ad porro quis. Ex labore libero necessitatibus voluptatibus quasi maxime vitae nesciunt! Assumenda cumque aspernatur recusandae sed, dolor eveniet ipsa architecto. Libero quas sapiente error accusamus qui optio odio nostrum voluptatem dignissimos cumque! Delectus, deserunt eveniet! Sequi quos illo fuga, officia ipsam distinctio non facere placeat exercitationem eveniet minus laboriosam, fugit, hic fugiat quaerat deserunt cum odit saepe soluta perspiciatis. Architecto facilis iusto, eveniet iure ipsa doloremque ea quia voluptatum sit voluptatibus.
+                    </p>
+                    <a href="#" class="service-explore">Explore more about flight booking</a>
+                    <button class="btn-secondary btn-service">Book a Flight</button>
+                </div>
+                <div class="service-image">
+                    <div class="service-review">
+                        <h1 class="service-review-h1">Flight as a travel medium</h1>
+                        <p class="service-review-p">When you choose cars as a medium for your travel it means that you're going to travel within a state. Cars are the least expensive medium for travel.</p>
+                        <buttton class="btn-tertiary btn-read"><i class="ri-google-fill"></i>&nbsp;Read more</buttton>
+                    </div>
+                </div>
+            </div>
+            <div class="service-container">
+                <div class="service-content">
+                    <h1 class="service-content-h1">Tourist Hotels</h1>
+                    <span class="service-capacity">Maximum one family per room</span>
+                    <p class="service-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae temporibus dolores esse fugit accusantium magni atque tempore. At, exercitationem quae! Modi excepturi possimus nesciunt ea nobis nemo velit, ad porro quis. Ex labore libero necessitatibus voluptatibus quasi maxime vitae nesciunt! Assumenda cumque aspernatur recusandae sed, dolor eveniet ipsa architecto. Libero quas sapiente error accusamus qui optio odio nostrum voluptatem dignissimos cumque! Delectus, deserunt eveniet! Sequi quos illo fuga, officia ipsam distinctio non facere placeat exercitationem eveniet minus laboriosam, fugit, hic fugiat quaerat deserunt cum odit saepe soluta perspiciatis. Architecto facilis iusto, eveniet iure ipsa doloremque ea quia voluptatum sit voluptatibus.
+                    </p>
+                    <a href="#" class="service-explore">Explore more about room booking</a>
+                    <button class="btn-secondary btn-service">Book a room</button>
+                </div>
+                <div class="service-image">
+                    <div class="service-review">
+                        <h1 class="service-review-h1">Hotels</h1>
+                        <p class="service-review-p">When you choose cars as a medium for your travel it means that you're going to travel within a state. Cars are the least expensive medium for travel.</p>
+                        <buttton class="btn-tertiary btn-read"><i class="ri-google-fill"></i>&nbsp;Read more</buttton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews">
+        <div class="section-head">
+            <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M46.1713 53.6103C45.7122 53.5328 45.2419 53.4938 44.7732 53.4938H40.2978V50.6388C42.8754 48.9185 44.577 45.9849 44.577 42.6602V37.5248C44.577 35.7558 44.0912 34.0269 43.172 32.5256L41.4201 33.5982C42.1416 34.7767 42.5232 36.1347 42.5232 37.5248V38.6017L42.2533 38.103C41.4319 36.5847 39.8494 35.6414 38.1231 35.6414H31.8579C30.1317 35.6414 28.5492 36.5847 27.7278 38.103L27.4584 38.6017V37.5248C27.4584 33.3711 30.8371 29.9924 34.9908 29.9924C36.9944 29.9924 38.8804 30.7705 40.301 32.183L41.7493 30.7262C39.9413 28.9283 37.5411 27.938 34.9908 27.938C29.7047 27.938 25.404 32.2386 25.404 37.5248V42.6602C25.404 45.9849 27.1062 48.919 29.6838 50.6388V53.4938H25.2084C20.5967 53.4938 16.845 57.2456 16.845 61.8578V70.0502H18.8994V61.8578C18.8994 58.3786 21.7292 55.5482 25.2084 55.5482H29.7629C30.1937 58.0445 32.3731 59.9504 34.9908 59.9504C37.6085 59.9504 39.7879 58.0445 40.2187 55.5482H44.7732C45.128 55.5482 45.4834 55.5776 45.8303 55.6364L46.1713 53.6103ZM38.2434 54.6434C38.2434 56.437 36.7844 57.896 34.9908 57.896C33.1972 57.896 31.7382 56.437 31.7382 54.6434V51.6778C32.7542 52.0455 33.8492 52.2464 34.9908 52.2464C36.1324 52.2464 37.2274 52.0455 38.2434 51.6778V54.6434ZM34.9908 50.1926C30.9205 50.1926 27.5963 46.9469 27.4648 42.9087L29.5352 39.0805C29.997 38.2265 30.8874 37.6958 31.8579 37.6958H38.1231C39.0942 37.6958 39.9846 38.2265 40.4464 39.0805L42.5168 42.9082C42.3848 46.9469 39.0606 50.1926 34.9908 50.1926Z" fill="#00B300"/>
+                <path d="M48.3967 54.3179L47.5058 56.1686C49.6788 57.2145 51.0822 59.448 51.0822 61.8577V70.0502H53.1366V61.8577C53.1366 58.6634 51.2762 55.7042 48.3967 54.3179V54.3179Z" fill="#00B300"/>
+                <path d="M44.9196 65.1196H46.974V70.0498H44.9196V65.1196Z" fill="#00B300"/>
+                <path d="M23.0076 65.1196H25.062V70.0498H23.0076V65.1196Z" fill="#00B300"/>
+                <path d="M18.1928 9.6807L15.8178 4.86914L13.4427 9.6807L8.13256 10.4524L11.9752 14.1983L11.0682 19.4871L15.8178 16.9902L20.5674 19.4871L19.6604 14.1983L23.503 10.4524L18.1928 9.6807ZM17.839 15.7321L15.8178 14.6692L13.7965 15.7321L14.1824 13.4811L12.547 11.8869L14.8072 11.5587L15.8178 9.51074L16.8284 11.5587L19.0886 11.8869L17.4532 13.4811L17.839 15.7321Z" fill="#00B300"/>
+                <path d="M38.0505 9.68074L35.6754 4.86865L33.3009 9.68074L27.9902 10.4525L31.8328 14.1984L30.9259 19.4872L35.6754 16.9903L40.4255 19.4872L39.518 14.1978L43.3607 10.4525L38.0505 9.68074ZM37.6972 15.7322L35.6754 14.6692L33.6542 15.7322L34.04 13.4811L32.4046 11.8869L34.6648 11.5588L35.6754 9.51079L36.686 11.5588L38.9462 11.8869L37.3108 13.4811L37.6972 15.7322Z" fill="#00B300"/>
+                <path d="M54.1638 4.86865L51.7888 9.68074L46.4786 10.4525L50.3212 14.1978L49.4142 19.4872L54.1638 16.9903L58.9139 19.4872L58.0064 14.1978L61.849 10.4525L56.5388 9.68074L54.1638 4.86865ZM56.185 15.7322L54.1638 14.6692L52.142 15.7322L52.5284 13.4811L50.893 11.8869L53.1532 11.5588L54.1638 9.51079L55.1744 11.5588L57.4346 11.8869L55.7992 13.4811L56.185 15.7322Z" fill="#00B300"/>
+                <path d="M66.2154 0H53.6021V2.05438H66.2154C67.1592 2.05438 67.9272 2.82237 67.9272 3.76619V21.5694C67.9272 22.5138 67.1592 23.2818 66.2154 23.2818H19.584V30.5432L9.29603 23.2818H3.76619C2.82237 23.2818 2.05438 22.5138 2.05438 21.5694V12.6229H0V21.5694C0 23.6463 1.68936 25.3356 3.76619 25.3356H8.64455L21.6384 34.5082V25.3356H66.2154C68.2922 25.3356 69.9816 23.6463 69.9816 21.5694V3.76619C69.9816 1.68936 68.2922 0 66.2154 0V0Z" fill="#00B300"/>
+                <path d="M2.05438 3.76619C2.05438 2.82237 2.82237 2.05438 3.76619 2.05438H51.5483V0H3.76619C1.68936 0 0 1.68936 0 3.76619V10.5685H2.05438V3.76619Z" fill="#00B300"/>
+                <path d="M20.9532 61.8577H23.0076C23.0076 60.644 23.9947 59.6564 25.2084 59.6564V57.6025C22.8622 57.6025 20.9532 59.5116 20.9532 61.8577Z" fill="#00B300"/>
+                <path d="M65.736 9.24431V4.10889H60.6006V6.16274H63.6816V9.24431H65.736Z" fill="#00B300"/>
+                <path d="M4.10876 15.9546V21.0905H9.24419V19.0362H6.16261V15.9546H4.10876Z" fill="#00B300"/>
+                <path d="M29.8554 65.4624H31.9092V67.5163H29.8554V65.4624Z" fill="#00B300"/>
+                <path d="M33.9636 65.4624H36.018V67.5163H33.9636V65.4624Z" fill="#00B300"/>
+                <path d="M38.0724 65.4624H40.1262V67.5163H38.0724V65.4624Z" fill="#00B300"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="70.05" height="70.05" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+            <h1 class="section-h1">Top reviews from our customers</h1>
+        </div>
+        <div class="reviews-wrapper">
+            <div class="review">
+                <div class="review-header">
+                    <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
+                    <div class="user-details">
+                        <h3 class="user-name-h3">Angu Selvam Krishnan</h3>
+                        <p class="trip-to">A trip to <strong>India</strong></p>
+                    </div>
+                </div>
+                <div class="review-mid">
+                    <h2 class="review-title">Amazing Travel Experience</h2>
+                    <div class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga. Minima beatae, cumque cum officiis hic possimus quae quod culpa, consequatur temporibus consectetur unde nemo.</div>
+                </div>
+                <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="https://images.pexels.com/photos/3525908/pexels-photo-3525908.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
+                    <div class="user-details">
+                        <h3 class="user-name-h3">Gowtham Vasudevan</h3>
+                        <p class="trip-to">A trip to <strong>Australia</strong></p>
+                    </div>
+                </div>
+                <div class="review-mid">
+                    <h2 class="review-title">Worth the money.</h2>
+                    <div class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga. Minima beatae, cumque cum officiis hic possimus quae quod culpa, consequatur temporibus consectetur unde nemo.</div>
+                </div>
+                <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="https://images.pexels.com/photos/4061512/pexels-photo-4061512.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
+                    <div class="user-details">
+                        <h3 class="user-name-h3">Jeevanantham Nagarajan</h3>
+                        <p class="trip-to">A trip to <strong>Singapore</strong></p>
+                    </div>
+                </div>
+                <div class="review-mid">
+                    <h2 class="review-title">I am loving Trawellz..</h2>
+                    <div class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga. Minima beatae, cumque cum officiis hic possimus quae quod culpa, consequatur temporibus consectetur unde nemo.</div>
+                </div>
+                <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="https://images.pexels.com/photos/2748239/pexels-photo-2748239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
+                    <div class="user-details">
+                        <h3 class="user-name-h3">Midhuna Muralidharan</h3>
+                        <p class="trip-to">A trip to <strong>United States</strong></p>
+                    </div>
+                </div>
+                <div class="review-mid">
+                    <h2 class="review-title">The best journey ever</h2>
+                    <div class="review-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga. Minima beatae, cumque cum officiis hic possimus quae quod culpa, consequatur temporibus consectetur unde nemo.</div>
+                </div>
+                <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                </div>
+            </div>
+        </div>
+        <div class="feedback">
+            <p>Did you find the above mentioned reviews helpful?</p>
+            <br>
+            <button class="btn-feed btn-tertiary">Give feedback</button>
+        </div>
+    </section>
+    <section id="book">
+        <div class="book-left">
+            <div class="book-left-wrapper">
+                <div class="section-head">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M81.7095 51.6651C81.5198 51.6651 81.3322 51.6251 81.159 51.5478C80.9858 51.4705 80.8308 51.3576 80.7041 51.2165C80.1081 50.5543 66.1216 34.8462 66.1216 23.207C66.1216 19.0728 67.7639 15.108 70.6872 12.1847C73.6105 9.26143 77.5753 7.61914 81.7095 7.61914C85.8436 7.61914 89.8084 9.26143 92.7317 12.1847C95.655 15.108 97.2973 19.0728 97.2973 23.207C97.2973 34.8462 83.3095 50.5543 82.7149 51.2165C82.5882 51.3576 82.4332 51.4705 82.2599 51.5478C82.0867 51.6251 81.8992 51.6651 81.7095 51.6651ZM81.7095 10.3218C78.2933 10.3258 75.0182 11.6846 72.6027 14.1002C70.1871 16.5157 68.8283 19.7908 68.8243 23.207C68.8243 32.1178 78.5162 44.4232 81.7095 48.2381C84.9014 44.4246 94.5946 32.1097 94.5946 23.207C94.5907 19.7908 93.2319 16.5157 90.8163 14.1002C88.4007 11.6846 85.1256 10.3258 81.7095 10.3218Z" fill="white"/>
+                        <path d="M81.7095 32.8742C79.8653 32.8742 78.0625 32.3274 76.5291 31.3028C74.9958 30.2782 73.8006 28.822 73.0949 27.1182C72.3892 25.4144 72.2045 23.5396 72.5643 21.7308C72.9241 19.9221 73.8121 18.2607 75.1162 16.9566C76.4202 15.6526 78.0816 14.7645 79.8904 14.4048C81.6991 14.045 83.5739 14.2296 85.2777 14.9354C86.9815 15.6411 88.4378 16.8362 89.4624 18.3696C90.4869 19.903 91.0338 21.7057 91.0338 23.5499C91.0317 26.0222 90.0486 28.3926 88.3004 30.1408C86.5522 31.889 84.1818 32.8721 81.7095 32.8742ZM81.7095 16.9283C80.3998 16.9283 79.1196 17.3166 78.0307 18.0442C76.9418 18.7718 76.0931 19.806 75.5919 21.0159C75.0907 22.2259 74.9596 23.5573 75.2151 24.8417C75.4706 26.1262 76.1012 27.3061 77.0273 28.2321C77.9533 29.1582 79.1332 29.7888 80.4177 30.0443C81.7021 30.2998 83.0335 30.1687 84.2435 29.6675C85.4534 29.1663 86.4876 28.3176 87.2151 27.2287C87.9427 26.1398 88.3311 24.8595 88.3311 23.5499C88.3297 21.7947 87.6314 20.1118 86.3898 18.8712C85.1481 17.6306 83.4647 16.9337 81.7095 16.9337V16.9283Z" fill="white"/>
+                        <path d="M18.2905 92.3811C18.1009 92.381 17.9133 92.3411 17.7401 92.2638C17.5669 92.1865 17.4118 92.0736 17.2851 91.9324C16.6905 91.2703 2.7027 75.5635 2.7027 63.9189C2.7027 59.7847 4.34498 55.8199 7.26827 52.8966C10.1916 49.9733 14.1564 48.3311 18.2905 48.3311C22.4247 48.3311 26.3895 49.9733 29.3128 52.8966C32.2361 55.8199 33.8784 59.7847 33.8784 63.9189C33.8784 75.5581 19.8919 91.2649 19.2959 91.927C19.1697 92.0692 19.0149 92.1831 18.8417 92.2613C18.6684 92.3396 18.4806 92.3804 18.2905 92.3811ZM18.2905 51.0378C14.8751 51.0417 11.6006 52.4 9.18514 54.8147C6.76968 57.2294 5.41041 60.5035 5.4054 63.9189C5.4054 72.8216 15.0986 85.1351 18.2905 88.9486C21.4865 85.1351 31.1757 72.827 31.1757 63.9189C31.1707 60.5035 29.8114 57.2294 27.3959 54.8147C24.9805 52.4 21.706 51.0417 18.2905 51.0378Z" fill="white"/>
+                        <path d="M18.2906 73.5554C16.4538 73.5554 14.6583 73.0107 13.1311 71.9903C11.604 70.9698 10.4137 69.5193 9.71086 67.8224C9.00802 66.1254 8.8242 64.2582 9.18263 62.4567C9.54106 60.6553 10.4256 59.0006 11.7245 57.7019C13.0234 56.4032 14.6782 55.5189 16.4797 55.1607C18.2812 54.8025 20.1484 54.9866 21.8453 55.6897C23.5422 56.3928 24.9924 57.5833 26.0127 59.1106C27.0329 60.6379 27.5773 62.4335 27.5771 64.2703C27.5742 66.7322 26.5948 69.0924 24.8539 70.8332C23.1129 72.5739 20.7525 73.5529 18.2906 73.5554ZM18.2906 57.6865C16.9884 57.6865 15.7155 58.0726 14.6328 58.796C13.5501 59.5195 12.7063 60.5477 12.208 61.7508C11.7096 62.9538 11.5793 64.2776 11.8333 65.5547C12.0873 66.8318 12.7144 68.0049 13.6351 68.9257C14.5559 69.8465 15.729 70.4735 17.0061 70.7275C18.2833 70.9816 19.6071 70.8512 20.8101 70.3529C22.0131 69.8546 23.0414 69.0107 23.7648 67.928C24.4882 66.8453 24.8744 65.5724 24.8744 64.2703C24.8726 62.5247 24.1784 60.8511 22.944 59.6168C21.7097 58.3825 20.0362 57.6883 18.2906 57.6865Z" fill="white"/>
+                        <path d="M60.1352 92.378H56.1216C55.7632 92.378 55.4195 92.2356 55.1661 91.9822C54.9126 91.7288 54.7703 91.385 54.7703 91.0266C54.7703 90.6682 54.9126 90.3245 55.1661 90.0711C55.4195 89.8177 55.7632 89.6753 56.1216 89.6753H60.1352C60.4936 89.6753 60.8373 89.8177 61.0907 90.0711C61.3441 90.3245 61.4865 90.6682 61.4865 91.0266C61.4865 91.385 61.3441 91.7288 61.0907 91.9822C60.8373 92.2356 60.4936 92.378 60.1352 92.378Z" fill="white"/>
+                        <path d="M33.2702 92.378H18.2973C17.9389 92.378 17.5952 92.2356 17.3417 91.9822C17.0883 91.7288 16.9459 91.385 16.9459 91.0266C16.9459 90.6682 17.0883 90.3245 17.3417 90.0711C17.5952 89.8177 17.9389 89.6753 18.2973 89.6753H33.2702C33.6286 89.6753 33.9724 89.8177 34.2258 90.0711C34.4792 90.3245 34.6216 90.6682 34.6216 91.0266C34.6216 91.385 34.4792 91.7288 34.2258 91.9822C33.9724 92.2356 33.6286 92.378 33.2702 92.378Z" fill="white"/>
+                        <path d="M46.6621 92.378H42.7297C42.3713 92.378 42.0276 92.2356 41.7742 91.9822C41.5207 91.7288 41.3784 91.385 41.3784 91.0266C41.3784 90.6682 41.5207 90.3245 41.7742 90.0711C42.0276 89.8177 42.3713 89.6753 42.7297 89.6753H46.6621C47.0205 89.6753 47.3643 89.8177 47.6177 90.0711C47.8711 90.3245 48.0135 90.6682 48.0135 91.0266C48.0135 91.385 47.8711 91.7288 47.6177 91.9822C47.3643 92.2356 47.0205 92.378 46.6621 92.378Z" fill="white"/>
+                        <path d="M72.2162 92.3784H69.5946C69.2362 92.3784 68.8924 92.236 68.639 91.9826C68.3856 91.7292 68.2432 91.3854 68.2432 91.027C68.2432 90.6686 68.3856 90.3249 68.639 90.0715C68.8924 89.8181 69.2362 89.6757 69.5946 89.6757H72.2162C73.3475 89.6757 74.4678 89.4529 75.513 89.0199C76.5582 88.587 77.5079 87.9524 78.3078 87.1525C79.1078 86.3525 79.7423 85.4028 80.1753 84.3576C80.6082 83.3124 80.8311 82.1922 80.8311 81.0608C80.8311 79.9295 80.6082 78.8093 80.1753 77.7641C79.7423 76.7189 79.1078 75.7692 78.3078 74.9692C77.5079 74.1692 76.5582 73.5347 75.513 73.1017C74.4678 72.6688 73.3475 72.446 72.2162 72.446H52.4865C49.372 72.446 46.385 71.2087 44.1827 69.0064C41.9805 66.8042 40.7432 63.8172 40.7432 60.7027C40.7432 57.5882 41.9805 54.6013 44.1827 52.399C46.385 50.1967 49.372 48.9595 52.4865 48.9595H81.7027C82.0611 48.9595 82.4048 49.1018 82.6582 49.3553C82.9117 49.6087 83.054 49.9524 83.054 50.3108C83.054 50.6692 82.9117 51.0129 82.6582 51.2664C82.4048 51.5198 82.0611 51.6622 81.7027 51.6622H52.4865C50.0888 51.6622 47.7893 52.6147 46.0938 54.3101C44.3984 56.0055 43.4459 58.305 43.4459 60.7027C43.4459 63.1004 44.3984 65.3999 46.0938 67.0953C47.7893 68.7908 50.0888 69.7433 52.4865 69.7433H72.2162C75.2178 69.7433 78.0965 70.9356 80.2189 73.0581C82.3414 75.1806 83.5338 78.0592 83.5338 81.0608C83.5338 84.0624 82.3414 86.9411 80.2189 89.0636C78.0965 91.186 75.2178 92.3784 72.2162 92.3784Z" fill="white"/>
+                        </svg>
+                    <h1 class="section-h1">
+                        Start your journey with trawellz
+                    </h1>
+                    <p class="section-p">
+                        We promise that this will be the most memorable journey ever.
+                    </p>
+                    <button class="btn-tertiary btn-more">Know more</button>
+                </div>
+            </div>
+        </div>
+        <div class="book-right">
+            <div class="section-head">
+                <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M51.0781 70.0502C40.6173 70.0502 32.1062 61.5391 32.1062 51.0783C32.1062 40.6175 40.6173 32.1064 51.0781 32.1064C61.5389 32.1064 70.05 40.6175 70.05 51.0783C70.05 61.5391 61.5389 70.0502 51.0781 70.0502ZM51.0781 35.0252C42.2255 35.0252 35.025 42.2287 35.025 51.0783C35.025 59.928 42.2255 67.1314 51.0781 67.1314C59.9307 67.1314 67.1313 59.928 67.1313 51.0783C67.1313 42.2287 59.9307 35.0252 51.0781 35.0252Z" fill="#00B300"/>
+                    <path d="M48.1594 58.3751C47.7741 58.3751 47.4005 58.2204 47.1261 57.949L41.2886 52.1115C40.7195 51.5423 40.7195 50.6171 41.2886 50.0479C41.8578 49.4787 42.783 49.4787 43.3522 50.0479L48.0864 54.7821L57.2746 44.2805C57.8058 43.6704 58.7282 43.6121 59.3353 44.1433C59.9424 44.6745 60.0036 45.5939 59.4724 46.201L49.2568 57.876C48.9912 58.1795 48.6089 58.3605 48.2061 58.3751C48.1915 58.3751 48.174 58.3751 48.1594 58.3751V58.3751Z" fill="#00B300"/>
+                    <path d="M27.7281 61.2939H7.29688C3.27484 61.2939 0 58.0219 0 53.997V16.0532C0 12.0283 3.27484 8.75635 7.29688 8.75635H13.1344C13.94 8.75635 14.5938 9.41015 14.5938 10.2157C14.5938 11.0213 13.94 11.6751 13.1344 11.6751H7.29688C4.88307 11.6751 2.91875 13.6394 2.91875 16.0532V53.997C2.91875 56.4108 4.88307 58.3751 7.29688 58.3751H27.7281C28.5337 58.3751 29.1875 59.0289 29.1875 59.8345C29.1875 60.6401 28.5337 61.2939 27.7281 61.2939Z" fill="#00B300"/>
+                    <path d="M48.1594 26.2688C47.3538 26.2688 46.7 25.615 46.7 24.8095V16.0532C46.7 13.6394 44.7357 11.6751 42.3219 11.6751H36.4844C35.6788 11.6751 35.025 11.0213 35.025 10.2157C35.025 9.41015 35.6788 8.75635 36.4844 8.75635H42.3219C46.3439 8.75635 49.6187 12.0283 49.6187 16.0532V24.8095C49.6187 25.615 48.9649 26.2688 48.1594 26.2688Z" fill="#00B300"/>
+                    <path d="M33.5656 17.5125H16.0531C13.6393 17.5125 11.675 15.5482 11.675 13.1344V7.29688C11.675 6.4913 12.3288 5.8375 13.1344 5.8375H17.6584C18.3385 2.51013 21.2835 0 24.8094 0C28.3352 0 31.2803 2.51013 31.9603 5.8375H36.4844C37.29 5.8375 37.9438 6.4913 37.9438 7.29688V13.1344C37.9438 15.5482 35.9794 17.5125 33.5656 17.5125ZM14.5938 8.75625V13.1344C14.5938 13.937 15.2476 14.5938 16.0531 14.5938H33.5656C34.3712 14.5938 35.025 13.937 35.025 13.1344V8.75625H30.6469C29.8413 8.75625 29.1875 8.10245 29.1875 7.29688C29.1875 4.88307 27.2232 2.91875 24.8094 2.91875C22.3956 2.91875 20.4313 4.88307 20.4313 7.29688C20.4313 8.10245 19.7775 8.75625 18.9719 8.75625H14.5938Z" fill="#00B300"/>
+                    <path d="M39.4031 26.2688H10.2156C9.41004 26.2688 8.75624 25.615 8.75624 24.8095C8.75624 24.0039 9.41004 23.3501 10.2156 23.3501H39.4031C40.2087 23.3501 40.8625 24.0039 40.8625 24.8095C40.8625 25.615 40.2087 26.2688 39.4031 26.2688Z" fill="#00B300"/>
+                    <path d="M30.6469 35.0252H10.2156C9.41004 35.0252 8.75624 34.3714 8.75624 33.5658C8.75624 32.7602 9.41004 32.1064 10.2156 32.1064H30.6469C31.4524 32.1064 32.1062 32.7602 32.1062 33.5658C32.1062 34.3714 31.4524 35.0252 30.6469 35.0252Z" fill="#00B300"/>
+                    <path d="M24.8094 43.7815H10.2156C9.41004 43.7815 8.75624 43.1277 8.75624 42.3222C8.75624 41.5166 9.41004 40.8628 10.2156 40.8628H24.8094C25.6149 40.8628 26.2687 41.5166 26.2687 42.3222C26.2687 43.1277 25.6149 43.7815 24.8094 43.7815Z" fill="#00B300"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="70.05" height="70.05" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                <h1 class="section-h1">Make your Booking</h1>
+            </div>
+            <div class="booking-nav">
+                <select name="cars" id="mode">
+                    <option value="Cabs">Cabs</option>
+                    <option value="Flights">Flights</option>
+                    <option value="Hotels">Hotels</option>
+                </select>
+            </div>
+            <div class="forms">
+                <!-- <div class="forms-wrapper"></div> -->
+                <form action="" class="flight">
+                    <div class="input-group">
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Example: India">
+                            <label for="" class="ip-label">Depart Date</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Example: India">
+                            <label for="" class="ip-label">Return Date</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: India">
+                        <label for="" class="ip-label">From</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: United States">
+                        <label for="" class="ip-label">To</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" class="input-field" placeholder="Example: 5">
+                        <label for="" class="ip-label">Passengers</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: Economy">
+                        <label for="" class="ip-label">Class</label>
+                    </div>
+                    <button class="btn-secondary btn-submit" type="submit">Browse for flights</button>
+                </form>
+                <form action="" class="cabs">
+                    <div class="input-group">
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Example: India">
+                            <label for="" class="ip-label">Depart Date</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Example: India">
+                            <label for="" class="ip-label">Return Date</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: India">
+                        <label for="" class="ip-label">From</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: United States">
+                        <label for="" class="ip-label">To</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="number" class="input-field" placeholder="Example: 5">
+                        <label for="" class="ip-label">Passengers</label>
+                    </div>
+                    <button class="btn-secondary btn-submit" type="submit">Browse for Cabs</button>
+                </form>
+                <form action="" class="hotels">
+                    <div class="input-group">
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Example: India">
+                            <label for="" class="ip-label">Chechk In</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="date" class="input-field" placeholder="Example: India">
+                            <label for="" class="ip-label">Check Out</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: Leela palace">
+                        <label for="" class="ip-label">Destination</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="number" class="input-field" placeholder="Example: 2">
+                        <label for="" class="ip-label">Room(s)</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Example: 5">
+                        <label for="" class="ip-label">Guest(s)</label>
+                    </div>
+                    <button class="btn-secondary btn-submit" type="submit">Browse for Hotels</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+            <div class="foot-links">
+                <a href="" class="foot-link-head">Support</a>
+                <a href="" class="foot-links-a">Contact us</a>
+                <a href="" class="foot-links-a">FAQ's</a>
+                <a href="" class="foot-links-a">Get employed</a>
+                <a href="" class="foot-links-a">Submit review</a>
+            </div>
+            <div class="foot-links">
+                <a href="" class="foot-link-head">Trawellz</a>
+                <a href="" class="foot-links-a">About Trawellz</a>
+                <a href="" class="foot-links-a">Career</a>
+                <a href="" class="foot-links-a">Our objective</a>
+                <a href="" class="foot-links-a">Future enhancements</a>
+            </div>
+            <div class="subscription">
+                <p>Give your email for exciting offers and updates</p>
+                <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Example: siva@gmail.com">
+                    <label for="" class="ip-label">Email</label>
+                </div>
+                <button class="btn-feed btn-tertiary btn-sub">Subsribe</button>
+            </div>
+            <div class="social-links">
+                <h3>Connect with Trawellz</h3>
+                <div class="contact">
+                    <i class="ri-facebook-circle-fill"></i>
+                    <i class="ri-twitter-fill"></i>
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-mail-line"></i>
+                </div>
+            </div>
+            <p class="copy">No copyrights reserved.</p>
+    </div>
+    <script src="owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        
+$('.icon-menu').click(function(){
+    $('.links-wrapper').addClass('toggle-nav');
+});
+$('.icon-close').click(function(){
+    $('.links-wrapper').removeClass('toggle-nav');
+});
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if (this.scrollY>50){
+            $('.logo-wrapper').addClass('bg-white');
+            $('nav').addClass('border');
+            $('.nav-h1, .icon-menu').addClass('text-acc');
+        }else{
+            $('.logo-wrapper').removeClass('bg-white');
+            $('nav').removeClass('border');
+            $('.nav-h1, .icon-menu').removeClass('text-acc');
+        }
+    });
+    $('.flight, .hotels').addClass('display-none');
+});
+$('#mode').change(function(){
+    $('.flight, .cabs, .hotels').addClass('display-none');
+    var text = $('#mode').val();
+        if (text==='Flights'){
+            // $('.btn-book:nth-child(2)').addClass('btn-trans-active');
+            if ($('.flight').hasClass('display-none')){
+                $('.flight').removeClass('display-none');
+                $('.cabs, .hotels').addClass('display-none');
+            }
+        }
+        else if (text==='Cabs'){
+            // $('.btn-book:nth-child(1)').addClass('btn-trans-active');
+            if ($('.cabs').hasClass('display-none')){
+                $('.flight, .hotels').addClass('display-none');
+                $('.cabs').removeClass('display-none');
+            }
+        }
+        else if (text==='Hotels'){
+            // $('.btn-book:nth-child(3)').addClass('btn-trans-active');
+            if ($('.hotels').hasClass('display-none')){
+                $('.flight, .cabs').addClass('display-none');
+                $('.hotels').removeClass('display-none');
+            }
+        }
+});
+
+    </script>
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
