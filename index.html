@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="owl.carousel.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="styles.css"> -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 *{
 	padding: 0;
 	margin: 0;
@@ -374,15 +374,16 @@ nav{
 	justify-content: space-between;
 	margin-bottom: 1.5rem;
 }
-#mode{
-	width: 100%;
-	background: transparent;
-	outline: none;
-	border: none;
-	border-bottom: solid 1px var(--acc);
-	color: var(--acc);
-	font-size: 1rem;
-	padding: 1rem 0px;
+.btn-nav{
+    background: transparent;
+    border: none;
+    font-size: 13.6px;
+    color: rgba(var(--text-rgb), .65);
+}
+.btn-nav-active{
+    color: var(--acc);
+    font-size: 14.6px;
+    font-weight: 480;
 }
 .forms{
 	padding: 2rem var(--body-pad) var(--body-pad);
@@ -534,22 +535,24 @@ nav{
 }
 .foot-link-head{
 	color: var(--acc);
-	font-weight: bold;
+    font-size: .8rem;
 }
 .foot-links-a{
 	color: rgba(var(--text-rgb), .7);
+    font-size: .8rem;
 }
 .subscription{
 	width: 20%;
 	display: flex;
 	flex-direction: column;
-	gap: 1.15rem;
+	gap: 1.25rem;
 }
 .subscription .input-field{
 	background: transparent;
 }
 .subscription p{
 	color: var(--acc);
+    font-size: .8rem;
 }
 #footer h1{
 	font-weight: 500;
@@ -565,6 +568,7 @@ nav{
 }
 .btn-sub{
 	width: 100%;
+    color: var(--bg);
 }
 .contact{
 	display: flex;
@@ -815,12 +819,12 @@ nav{
 		padding: 2rem;
 	}
 	#footer{
-		min-height: 90vh;
+		min-height: 100vh;
 		padding: 2rem;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
-		gap: 1.5rem;
+		gap: 2.5rem;
 	}
 	.foot-links:nth-child(1){
 		grid-column: 1/2;
@@ -862,14 +866,14 @@ nav{
 .display-none{
 	display: none !important; 
 }
-    </style>
+	</style>
 
     
 </head>
 
 <body>
     <section id="home">
-        <nav>
+        <nav data-aos="fade-down">
             <div class="logo-wrapper">
                 <h1 class="nav-h1">Trawellz</h1>
                 <i class="ri-menu-3-line icon-menu"></i>
@@ -888,7 +892,7 @@ nav{
         </nav>
         <div class="landing">
             <div class="landing-left"></div>
-            <div class="landing-right">
+            <div class="landing-right" data-aos="fade-down">
                 <div class="landing-content">
                     <span class="landing-span">
                         A travel agency
@@ -907,7 +911,7 @@ nav{
         </div>
     </section>
     <section id="services">
-        <div class="section-head">
+        <div class="section-head" data-aos="fade-up">
             <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)">
                 <path d="M0.72145 6.92124L5.38989 15.0905C5.54736 15.3666 5.81093 15.5663 6.11915 15.6436L10.4746 16.7325L25.4127 31.6706L27.0633 30.0205L11.8913 14.849C11.742 14.6993 11.5548 14.5932 11.3498 14.5418L7.1648 13.4918L3.1901 6.53237L6.59781 3.12465L13.5601 7.1032L14.6106 11.2882C14.6615 11.4937 14.7681 11.6814 14.9174 11.8307L30.0893 27.0026L31.7394 25.3521L16.8013 10.4139L15.7124 6.06091C15.6351 5.75221 15.4354 5.48816 15.1593 5.33021L6.98957 0.662247C6.53396 0.402996 5.96072 0.479811 5.58913 0.849964L0.921169 5.51841C0.545735 5.8876 0.464119 6.46179 0.72145 6.92124Z" fill="#00B300"/>
@@ -926,7 +930,7 @@ nav{
         </div>
         <div class="services">
             <div class="service-container">
-                <div class="service-content">
+                <div class="service-content" data-aos="fade-right">
                     <h1 class="service-content-h1">Travel cabs</h1>
                     <span class="service-capacity">Maximun 5 people in this medium</span>
                     <p class="service-desc">
@@ -935,7 +939,7 @@ nav{
                     <a href="#" class="service-explore">Explore more about car booking</a>
                     <button class="btn-secondary btn-service">Book a Cab</button>
                 </div>
-                <div class="service-image">
+                <div class="service-image" data-aos="fade-left">
                     <div class="service-review">
                         <h1 class="service-review-h1">Car as a travel medium</h1>
                         <p class="service-review-p">When you choose cars as a medium for your travel it means that you're going to travel within a state. Cars are the least expensive medium for travel.</p>
@@ -944,7 +948,7 @@ nav{
                 </div>
             </div>
             <div class="service-container">
-                <div class="service-content">
+                <div class="service-content" data-aos="fade-right">
                     <h1 class="service-content-h1">Travel Flights</h1>
                     <span class="service-capacity">Upto 20 people is applicable for this medium</span>
                     <p class="service-desc">
@@ -953,7 +957,7 @@ nav{
                     <a href="#" class="service-explore">Explore more about flight booking</a>
                     <button class="btn-secondary btn-service">Book a Flight</button>
                 </div>
-                <div class="service-image">
+                <div class="service-image" data-aos="fade-left">
                     <div class="service-review">
                         <h1 class="service-review-h1">Flight as a travel medium</h1>
                         <p class="service-review-p">When you choose cars as a medium for your travel it means that you're going to travel within a state. Cars are the least expensive medium for travel.</p>
@@ -962,7 +966,7 @@ nav{
                 </div>
             </div>
             <div class="service-container">
-                <div class="service-content">
+                <div class="service-content" data-aos="fade-right">
                     <h1 class="service-content-h1">Tourist Hotels</h1>
                     <span class="service-capacity">Maximum one family per room</span>
                     <p class="service-desc">
@@ -971,7 +975,7 @@ nav{
                     <a href="#" class="service-explore">Explore more about room booking</a>
                     <button class="btn-secondary btn-service">Book a room</button>
                 </div>
-                <div class="service-image">
+                <div class="service-image" data-aos="fade-left">
                     <div class="service-review">
                         <h1 class="service-review-h1">Hotels</h1>
                         <p class="service-review-p">When you choose cars as a medium for your travel it means that you're going to travel within a state. Cars are the least expensive medium for travel.</p>
@@ -982,7 +986,7 @@ nav{
         </div>
     </section>
     <section id="reviews">
-        <div class="section-head">
+        <div class="section-head" data-aos="fade-up">
             <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)">
                 <path d="M46.1713 53.6103C45.7122 53.5328 45.2419 53.4938 44.7732 53.4938H40.2978V50.6388C42.8754 48.9185 44.577 45.9849 44.577 42.6602V37.5248C44.577 35.7558 44.0912 34.0269 43.172 32.5256L41.4201 33.5982C42.1416 34.7767 42.5232 36.1347 42.5232 37.5248V38.6017L42.2533 38.103C41.4319 36.5847 39.8494 35.6414 38.1231 35.6414H31.8579C30.1317 35.6414 28.5492 36.5847 27.7278 38.103L27.4584 38.6017V37.5248C27.4584 33.3711 30.8371 29.9924 34.9908 29.9924C36.9944 29.9924 38.8804 30.7705 40.301 32.183L41.7493 30.7262C39.9413 28.9283 37.5411 27.938 34.9908 27.938C29.7047 27.938 25.404 32.2386 25.404 37.5248V42.6602C25.404 45.9849 27.1062 48.919 29.6838 50.6388V53.4938H25.2084C20.5967 53.4938 16.845 57.2456 16.845 61.8578V70.0502H18.8994V61.8578C18.8994 58.3786 21.7292 55.5482 25.2084 55.5482H29.7629C30.1937 58.0445 32.3731 59.9504 34.9908 59.9504C37.6085 59.9504 39.7879 58.0445 40.2187 55.5482H44.7732C45.128 55.5482 45.4834 55.5776 45.8303 55.6364L46.1713 53.6103ZM38.2434 54.6434C38.2434 56.437 36.7844 57.896 34.9908 57.896C33.1972 57.896 31.7382 56.437 31.7382 54.6434V51.6778C32.7542 52.0455 33.8492 52.2464 34.9908 52.2464C36.1324 52.2464 37.2274 52.0455 38.2434 51.6778V54.6434ZM34.9908 50.1926C30.9205 50.1926 27.5963 46.9469 27.4648 42.9087L29.5352 39.0805C29.997 38.2265 30.8874 37.6958 31.8579 37.6958H38.1231C39.0942 37.6958 39.9846 38.2265 40.4464 39.0805L42.5168 42.9082C42.3848 46.9469 39.0606 50.1926 34.9908 50.1926Z" fill="#00B300"/>
@@ -1010,7 +1014,7 @@ nav{
             <h1 class="section-h1">Top reviews from our customers</h1>
         </div>
         <div class="reviews-wrapper">
-            <div class="review">
+            <div class="review" data-aos="zoom-in">
                 <div class="review-header">
                     <img src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
                     <div class="user-details">
@@ -1030,7 +1034,7 @@ nav{
                     <i class="ri-star-line"></i>
                 </div>
             </div>
-            <div class="review">
+            <div class="review" data-aos="zoom-in">
                 <div class="review-header">
                     <img src="https://images.pexels.com/photos/3525908/pexels-photo-3525908.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
                     <div class="user-details">
@@ -1050,7 +1054,7 @@ nav{
                     <i class="ri-star-fill"></i>
                 </div>
             </div>
-            <div class="review">
+            <div class="review" data-aos="zoom-in">
                 <div class="review-header">
                     <img src="https://images.pexels.com/photos/4061512/pexels-photo-4061512.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
                     <div class="user-details">
@@ -1070,7 +1074,7 @@ nav{
                     <i class="ri-star-fill"></i>
                 </div>
             </div>
-            <div class="review">
+            <div class="review" data-aos="zoom-in">
                 <div class="review-header">
                     <img src="https://images.pexels.com/photos/2748239/pexels-photo-2748239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="user-image">
                     <div class="user-details">
@@ -1098,7 +1102,7 @@ nav{
         </div>
     </section>
     <section id="book">
-        <div class="book-left">
+        <div class="book-left" data-aos="fade-right">
             <div class="book-left-wrapper">
                 <div class="section-head">
                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1121,7 +1125,7 @@ nav{
                 </div>
             </div>
         </div>
-        <div class="book-right">
+        <div class="book-right" data-aos="fade-left">
             <div class="section-head">
                 <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
@@ -1144,11 +1148,15 @@ nav{
                 <h1 class="section-h1">Make your Booking</h1>
             </div>
             <div class="booking-nav">
-                <select name="cars" id="mode">
-                    <option value="Cabs">Cabs</option>
-                    <option value="Flights">Flights</option>
-                    <option value="Hotels">Hotels</option>
-                </select>
+				<button class="btn-nav" value = "Flights">
+					<i class="ri-plane-line"></i>&nbsp;&nbsp;Flights
+				</button>
+				<button class="btn-nav" value = "Cabs">
+					<i class="ri-car-line"></i>&nbsp;&nbsp;Cabs
+				</button>
+				<button class="btn-nav" value = "Hotels">
+					<i class="ri-hotel-line"></i>&nbsp;&nbsp;Hotels
+				</button>
             </div>
             <div class="forms">
                 <!-- <div class="forms-wrapper"></div> -->
@@ -1257,7 +1265,7 @@ nav{
                     <input type="text" class="input-field" placeholder="Example: siva@gmail.com">
                     <label for="" class="ip-label">Email</label>
                 </div>
-                <button class="btn-feed btn-tertiary btn-sub">Subsribe</button>
+                <button class="btn-feed btn-secondary btn-sub">Subsribe</button>
             </div>
             <div class="social-links">
                 <h3>Connect with Trawellz</h3>
@@ -1276,7 +1284,8 @@ nav{
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <!-- <script src="script.js"></script> -->
-    <script>
+	<script>
+			
         
 $('.icon-menu').click(function(){
     $('.links-wrapper').addClass('toggle-nav');
@@ -1296,39 +1305,38 @@ $(document).ready(function(){
             $('.nav-h1, .icon-menu').removeClass('text-acc');
         }
     });
-    $('.flight, .hotels').addClass('display-none');
+    $('.cabs, .hotels').addClass('display-none');
+    $('.btn-nav:nth-child(1)').addClass('btn-nav-active');
 });
-$('#mode').change(function(){
+$('.btn-nav').click(function(e){
+    $('.btn-nav').removeClass('btn-nav-active');
+    var x = e.target.innerText;
+    // alert(x);
     $('.flight, .cabs, .hotels').addClass('display-none');
-    var text = $('#mode').val();
+    var text = x.substring(2, x.length);
+    // alert(text);
         if (text==='Flights'){
-            // $('.btn-book:nth-child(2)').addClass('btn-trans-active');
-            if ($('.flight').hasClass('display-none')){
+            $('.btn-nav:nth-child(1)').addClass('btn-nav-active');
                 $('.flight').removeClass('display-none');
                 $('.cabs, .hotels').addClass('display-none');
-            }
         }
         else if (text==='Cabs'){
-            // $('.btn-book:nth-child(1)').addClass('btn-trans-active');
-            if ($('.cabs').hasClass('display-none')){
+            $('.btn-nav:nth-child(2)').addClass('btn-nav-active');
                 $('.flight, .hotels').addClass('display-none');
                 $('.cabs').removeClass('display-none');
-            }
         }
         else if (text==='Hotels'){
-            // $('.btn-book:nth-child(3)').addClass('btn-trans-active');
-            if ($('.hotels').hasClass('display-none')){
+            $('.btn-nav:nth-child(3)').addClass('btn-nav-active');
                 $('.flight, .cabs').addClass('display-none');
                 $('.hotels').removeClass('display-none');
-            }
         }
 });
-
-    </script>
-
-
+	
+	</script>
     <script>
-        AOS.init();
+        AOS.init({
+			duration: 850,
+		});
     </script>
 </body>
 
