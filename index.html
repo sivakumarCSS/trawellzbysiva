@@ -655,6 +655,7 @@ nav {
 .foot-wrapper, .foot-links-wrapper{
 	display: flex;
 	justify-content: space-between;
+	background: rgba(var(--text-rgb), .015);
 }
 .foot-links {
     display: flex;
@@ -731,6 +732,7 @@ nav {
     text-align: left;
     color: rgba(var(--text-rgb), .7);
     font-size: .8rem;
+	background: rgba(var(--text-rgb), .015);
 }
 
 @media (max-width: 800px) {
@@ -1041,7 +1043,7 @@ nav {
     }
 
     #footer {
-        
+        min-height: 90vh;
         padding: 2rem;
         display: flex;
 		flex-direction: column;
@@ -1050,7 +1052,7 @@ nav {
 		width: 100vw;
     }
 	.foot-wrapper{
-		min-height: 80vh;
+		
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
