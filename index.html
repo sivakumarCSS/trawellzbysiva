@@ -173,12 +173,12 @@ nav {
 
 .landing-right {
     width: 65%;
-    padding: 6.5rem var(--body-pad);
+    padding: 7rem var(--body-pad) 2rem;
 }
 
 .landing-content {
-    width: 42rem;
-    height: 28rem;
+    width: 40rem;
+    height: 25rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -207,7 +207,11 @@ nav {
     color: var(--acc);
     letter-spacing: 2px;
 }
-
+.slogan-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .slogan-content,
 .section-p {
     font-family: 'inter', sans-serif;
@@ -440,7 +444,7 @@ nav {
     height: 100%;
     position: relative;
     background: rgba(var(--text-rgb), .3);
-	/* padding: var(--body-pad); */
+    /* padding: var(--body-pad); */
 }
 
 .book-left-wrapper h1 {
@@ -648,22 +652,26 @@ nav {
     padding: 2.5rem var(--body-pad);
     height: 70vh;
     background: rgba(var(--text-rgb), .015);
-	display: flex;
-	flex-direction: column;
-	gap: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
 }
-.foot-wrapper, .foot-links-wrapper{
-	display: flex;
-	justify-content: space-between;
-/* 	background: rgba(var(--text-rgb), .015); */
+
+.foot-wrapper,
+.foot-links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* 	background: rgba(var(--text-rgb), .015); */
 }
+
 .foot-links {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-.foot-links-wrapper{
-	width: 30%;
+
+.foot-links-wrapper {
+    width: 30%;
 }
 
 .foot-1 div {
@@ -728,11 +736,11 @@ nav {
 }
 
 .copy {
-	width: 100%;
+    width: 100%;
     text-align: left;
     color: rgba(var(--text-rgb), .7);
     font-size: .8rem;
-/* 	background: rgba(var(--text-rgb), .015); */
+    /* 	background: rgba(var(--text-rgb), .015); */
 }
 
 @media (max-width: 800px) {
@@ -964,12 +972,14 @@ nav {
     .book-left {
         padding: 2rem 2rem 0;
         width: 100%;
-		min-height: 75vh;
+        min-height: 75vh;
     }
-	.book-left-wrapper::before{
-		background: url('https://images.pexels.com/photos/4209628/pexels-photo-4209628.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
-		background-size: cover;
-	}
+
+    .book-left-wrapper::before {
+        background: url('https://images.pexels.com/photos/4209628/pexels-photo-4209628.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat;
+        background-size: cover;
+    }
+
     .btn-more {
         width: 60%;
     }
@@ -1046,25 +1056,30 @@ nav {
         min-height: 90vh;
         padding: 2rem;
         display: flex;
-		flex-direction: column;
-/*         justify-content: space-between; */
-	    gap: 3rem;
-		width: 100vw;
+        flex-direction: column;
+        /*         justify-content: space-between; */
+        gap: 3rem;
+        width: 100vw;
     }
-	.foot-wrapper{
-		
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-/* 		justify-content: space-between; */
-	}
-	.foot-links-wrapper{
-		width: 100%;
-	}.book-left{
-		border-radius: 3px;
-		overflow: hidden;
-	}
+
+    .foot-wrapper {
+
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        /* 		justify-content: space-between; */
+    }
+
+    .foot-links-wrapper {
+        width: 100%;
+    }
+
+    .book-left {
+        border-radius: 3px;
+        overflow: hidden;
+    }
 }
+
 .toggle-nav {
     left: 40%;
 }
@@ -1118,12 +1133,15 @@ nav {
 					<span class="landing-span">
 						A travel agency
 					</span>
-					<h1 class="landing-slogan">
-						Hey do you love <strong>Travelling?</strong>
-					</h1>
-					<p class="slogan-content">
-						Trawellz is the most highly recomended travel agency by most travellers all around the world.
-					</p>
+					<div class="slogan-wrapper">
+						<h1 class="landing-slogan">
+							Hey do you love <strong>Travelling?</strong>
+						</h1>
+						<p class="slogan-content">
+							Trawellz is the most highly recomended travel agency by most travellers all around the world.
+						</p>
+					</div>
+					
 					<a href="#book">
 						<button class="btn-cta btn-primary">
 							Start your journey
