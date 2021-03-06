@@ -13,7 +13,8 @@
 		href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap"
 		rel="stylesheet">
 	<!-- <link rel="stylesheet" href="styles.css"> -->
-	<style>
+    <style>
+        
 		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
@@ -192,7 +193,7 @@ nav {
 
 .overlay {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: none;
 }
 
@@ -206,6 +207,7 @@ nav {
 .landing-slogan strong {
     color: var(--acc);
     letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(var(--acc-rgb), .25);
 }
 .slogan-wrapper{
     display: flex;
@@ -552,7 +554,7 @@ nav {
 #reviews {
     min-height: 100vh;
     padding-top: 0;
-    background: rgba(var(--text-rgb), .015);
+    background: rgba(var(--text-rgb), .02);
 }
 
 #review .section-head {
@@ -651,7 +653,7 @@ nav {
     width: 100%;
     padding: 2.5rem var(--body-pad);
     height: 70vh;
-    background: rgba(var(--text-rgb), .015);
+    background: rgba(var(--text-rgb), .02);
     display: flex;
     flex-direction: column;
     gap: 6rem;
@@ -750,15 +752,18 @@ nav {
         overflow-x: hidden;
         max-width: 100vw;
     }
-
+    section#home{
+        min-height: 50vh;
+        position: relative;
+    }
     #home {
         position: relative;
-	height: 70vh;
     }
 
     .overlay {
         display: initial;
         position: absolute;
+        height: 100%;
         top: 0;
         left: 0;
         z-index: -1;
@@ -848,8 +853,8 @@ nav {
 
     .landing-right {
         position: relative;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         z-index: 0;
         padding: 5rem 2rem 2rem;
         background-color: rgba(var(--text-rgb), .35);
@@ -1080,7 +1085,34 @@ nav {
         overflow: hidden;
     }
 }
+@media (max-width: 650px){
+    #footer {
+        min-height: 100vh;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        /*         justify-content: space-between; */
+        gap: 3rem;
+        width: 100vw;
+    }
 
+    .foot-wrapper {
+
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        /* 		justify-content: space-between; */
+    }
+
+    .foot-links-wrapper {
+        width: 100%;
+    }
+
+    .book-left {
+        border-radius: 3px;
+        overflow: hidden;
+    }
+}
 .toggle-nav {
     left: 40%;
 }
@@ -1100,7 +1132,8 @@ nav {
 .display-none {
     display: none !important;
 }
-	</style>
+    </style>
+	
 
 
 
@@ -1136,7 +1169,7 @@ nav {
 					</span>
 					<div class="slogan-wrapper">
 						<h1 class="landing-slogan">
-							Hey do you love <strong>Travelling?</strong>
+							Don’t be a tourist, be a <strong>traveler.</strong>
 						</h1>
 						<p class="slogan-content">
 							Trawellz is the most highly recomended travel agency by most travellers all around the world.
